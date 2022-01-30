@@ -1,0 +1,95 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: "Boston";
+    src: local("Boston"), url("./assets/fonts/boston.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Know";
+    src: local("Know"), url("./assets/fonts/knowyour.woff2") format("woff2");
+  }
+}
+
+/*
+=============== 
+Navbar
+===============
+*/
+
+.nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.links-container {
+  /* display: none; */
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s linear;
+}
+.show-container {
+  /* height: 10rem; */
+  display: flex;
+}
+
+.links {
+  padding: 7px;
+  cursor: pointer;
+}
+@media (min-width: 800px) {
+  .nav-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  .nav-header {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .links-container {
+    height: auto !important;
+  }
+  .links {
+    display: flex;
+  }
+
+  .links a:hover {
+    padding: 0;
+    background: transparent;
+  }
+  .social-icons {
+    display: flex;
+  }
+  .social-icons a {
+    margin: 0 0.5rem;
+    color: var(--clr-primary-5);
+    transition: var(--transition);
+  }
+  .social-icons a:hover {
+    color: var(--clr-primary-7);
+  }
+}
+
+@media (min-width: 800px) {
+  .show__dropdown {
+    top: 105px;
+    margin-left: -40px;
+    display: block;
+    position: absolute;
+    background: #1a1a1a;
+    padding: 20px;
+  }
+}
+
+.hide__dropdown {
+  display: none;
+}

@@ -1,0 +1,18 @@
+:root {
+  --primary: #ebc908;
+  --primary-text: #1a1a1a;
+  --secondary: #ff1dec;
+  --secondary-text: #ffffff;
+  --accent: #505050;
+  --accent-text: #ffffff;
+}
+
+body {
+  margin: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: 'center';
+    align-items: 'center';
+}
